@@ -1,0 +1,24 @@
+1] Select Handshake Snooper
+2] All Channels
+3] Close Scanner Terminal after 5s of SSID appearence
+4] Select TARGET SSID
+5] Select SKIP
+6] Choose RESET ATTACK
+7] Aireplay-ng Handshake Retrieval
+8] Cowpatty Verification for HASH
+9] Every 30s Handshake Verifier
+10] Synchronous Verification 
+11] Close HANDSNOOPER Terminal after 5s of CAPTURE
+12] Select another attack
+13] Select Captive Portal
+14] TYPE n 
+
+REPEAT FROM STEPS 2 to 6
+15] Select wlan0
+16] Rogue-AP HOSTPAD
+17] Use HASH Found
+18] Cowpatty Verification for HASH
+19] Create SSL Certificate-DISCONNECTED-OFFLINE
+20] Select FAKE Router Page
+
+

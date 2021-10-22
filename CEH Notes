@@ -1,0 +1,20 @@
+
+[intitle:intranet inurl:intranet inurl:employee]
+
+site:apple.com
+
+filetype:maple_mini_boot.bin
+
+More tools - Wed Developer - Network - Server
+
+host apple.com
+
+APNIC -Asia internet
+
+OS info - Netcraft , Shodan
+
+nmap -A -T5 scanme.nmap.org
+
+https://sourceforge.net/projects/openvisualtrace/
+
+/////////3.10

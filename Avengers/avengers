@@ -1,0 +1,13 @@
+#!/bin/bash
+
+main() {
+cd /root/Downloads
+#parole -p aring.mp3
+play aring.mp3 
+
+}
+script() {
+gnome-terminal --full-screen -- "ame"
+#gnome-terminal --geometry=165x41 -- "ame"
+}
+script&main 

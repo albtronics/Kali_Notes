@@ -1,0 +1,4 @@
+ifconfig wlan0 down
+macchanger -m 70:66:55:F7:17:AF wlan0
+ifconfig wlan0 up
+

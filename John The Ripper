@@ -1,0 +1,8 @@
+zip2john filename.extension
+zip2john filename.extension > hashname.txt
+john --format=zip hashname.txt
+
+rar = zip replace.
+
+
+

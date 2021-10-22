@@ -1,0 +1,5 @@
+python2 -m SimpleHTTPServer 80
+
+then ==> ngrok http 80
+
+Server Hosting & Tunneling

